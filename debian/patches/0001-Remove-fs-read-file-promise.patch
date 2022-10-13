@@ -1,0 +1,44 @@
+From: =?utf-8?q?Bastien_Roucari=C3=A8s?= <rouca@debian.org>
+Date: Wed, 6 Oct 2021 09:09:02 +0000
+Subject: Remove fs-read-file-promise
+
+Remove not needed depends on modern nodejs
+
+Forwarded: not-needed
+---
+ gulp-wrap/index.js     | 4 +++-
+ gulp-wrap/package.json | 1 -
+ 2 files changed, 3 insertions(+), 2 deletions(-)
+
+diff --git a/gulp-wrap/index.js b/gulp-wrap/index.js
+index c71e030..dd24db0 100644
+--- a/gulp-wrap/index.js
++++ b/gulp-wrap/index.js
+@@ -1,12 +1,14 @@
+ 'use strict';
+ 
+ var path = require('path');
++const util = require('util')
+ 
+ var consolidate = require('consolidate');
+ var extend = require('node.extend');
+ var PluginError = require('plugin-error');
+ var ES6Promise = global.Promise || require('es6-promise').Promise;
+-var readFile = require('fs-readfile-promise');
++var fs = require('fs');
++var readFile = util.promisify(fs.readFile);
+ var through = require('through2');
+ var tryit = require('tryit');
+ var VinylBufferStream = require('vinyl-bufferstream');
+diff --git a/gulp-wrap/package.json b/gulp-wrap/package.json
+index 68ced91..ed780c0 100644
+--- a/gulp-wrap/package.json
++++ b/gulp-wrap/package.json
+@@ -41,7 +41,6 @@
+   "dependencies": {
+     "consolidate": "^0.15.1",
+     "es6-promise": "^4.2.6",
+-    "fs-readfile-promise": "^3.0.1",
+     "js-yaml": "^3.13.0",
+     "lodash": "^4.17.11",
+     "node.extend": "2.0.2",

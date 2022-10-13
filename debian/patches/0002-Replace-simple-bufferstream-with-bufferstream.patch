@@ -1,0 +1,24 @@
+From: =?utf-8?q?Bastien_Roucari=C3=A8s?= <rouca@debian.org>
+Date: Sun, 31 Oct 2021 12:45:56 +0000
+Subject: Replace simple-bufferstream with bufferstream
+
+Better from debian point of view and avoid to package a b-d
+
+Forwarded: not-needed
+---
+ gulp-wrap/test/test.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/gulp-wrap/test/test.js b/gulp-wrap/test/test.js
+index 9b3a9f6..10842b6 100644
+--- a/gulp-wrap/test/test.js
++++ b/gulp-wrap/test/test.js
+@@ -4,7 +4,7 @@ var assert = require('assert');
+ var path = require('path');
+ var expect = require('expect.js');
+ 
+-var bufferToStream = require('simple-bufferstream');
++var bufferToStream = require('bufferstream');
+ var File = require('vinyl');
+ var wrap = require('..');
+ 

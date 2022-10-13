@@ -1,0 +1,38 @@
+From: =?utf-8?q?Bastien_Roucari=C3=A8s?= <rouca@debian.org>
+Date: Sun, 31 Oct 2021 14:19:52 +0000
+Subject: Use node-extend
+
+avoid a dependency and use a better maintained package
+
+forwarded: not-needed
+---
+ gulp-wrap/index.js     | 2 +-
+ gulp-wrap/package.json | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/gulp-wrap/index.js b/gulp-wrap/index.js
+index dd24db0..d1608fd 100644
+--- a/gulp-wrap/index.js
++++ b/gulp-wrap/index.js
+@@ -4,7 +4,7 @@ var path = require('path');
+ const util = require('util')
+ 
+ var consolidate = require('consolidate');
+-var extend = require('node.extend');
++var extend = require('extend');
+ var PluginError = require('plugin-error');
+ var ES6Promise = global.Promise || require('es6-promise').Promise;
+ var fs = require('fs');
+diff --git a/gulp-wrap/package.json b/gulp-wrap/package.json
+index ed780c0..1e8ba77 100644
+--- a/gulp-wrap/package.json
++++ b/gulp-wrap/package.json
+@@ -43,7 +43,7 @@
+     "es6-promise": "^4.2.6",
+     "js-yaml": "^3.13.0",
+     "lodash": "^4.17.11",
+-    "node.extend": "2.0.2",
++    "extend": ">=0.0.1",
+     "plugin-error": "^1.0.1",
+     "through2": "^3.0.1",
+     "tryit": "^1.0.1",

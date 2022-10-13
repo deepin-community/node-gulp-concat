@@ -1,0 +1,28 @@
+From: =?utf-8?q?Bastien_Roucari=C3=A8s?= <rouca@debian.org>
+Date: Sun, 31 Oct 2021 14:47:10 +0000
+Subject: Do not test for old nodejs with no promise
+
+Forwarded: not-needed
+---
+ gulp-wrap/test/test.js | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/gulp-wrap/test/test.js b/gulp-wrap/test/test.js
+index 9a8c92c..8eaf2fa 100644
+--- a/gulp-wrap/test/test.js
++++ b/gulp-wrap/test/test.js
+@@ -330,7 +330,7 @@ describe('gulp-wrap', function() {
+       contents: Buffer.from('{"name": "foo"}')
+     }));
+   });
+-
++/*
+   it('should handle if Promise object not available', function(done) {
+     delete require.cache[require.resolve('..')];
+     global.Promise = undefined;
+@@ -348,4 +348,5 @@ describe('gulp-wrap', function() {
+       contents: Buffer.from('foo')
+     }));
+   });
++*/
+ });
