@@ -9,11 +9,9 @@ Forwarded: not-needed
  gulp-wrap/test/test.js | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
-diff --git a/gulp-wrap/test/test.js b/gulp-wrap/test/test.js
-index 9b3a9f6..10842b6 100644
 --- a/gulp-wrap/test/test.js
 +++ b/gulp-wrap/test/test.js
-@@ -4,7 +4,7 @@ var assert = require('assert');
+@@ -4,7 +4,7 @@
  var path = require('path');
  var expect = require('expect.js');
  

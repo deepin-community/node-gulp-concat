@@ -10,11 +10,9 @@ forwarded: not-needed
  gulp-wrap/package.json | 2 +-
  2 files changed, 2 insertions(+), 2 deletions(-)
 
-diff --git a/gulp-wrap/index.js b/gulp-wrap/index.js
-index dd24db0..d1608fd 100644
 --- a/gulp-wrap/index.js
 +++ b/gulp-wrap/index.js
-@@ -4,7 +4,7 @@ var path = require('path');
+@@ -4,7 +4,7 @@
  const util = require('util')
  
  var consolidate = require('consolidate');
@@ -23,8 +21,6 @@ index dd24db0..d1608fd 100644
  var PluginError = require('plugin-error');
  var ES6Promise = global.Promise || require('es6-promise').Promise;
  var fs = require('fs');
-diff --git a/gulp-wrap/package.json b/gulp-wrap/package.json
-index ed780c0..1e8ba77 100644
 --- a/gulp-wrap/package.json
 +++ b/gulp-wrap/package.json
 @@ -43,7 +43,7 @@

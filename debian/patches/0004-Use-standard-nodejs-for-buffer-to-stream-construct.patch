@@ -9,11 +9,9 @@ Forwarded: not-needed
  gulp-wrap/test/test.js | 5 +++--
  1 file changed, 3 insertions(+), 2 deletions(-)
 
-diff --git a/gulp-wrap/test/test.js b/gulp-wrap/test/test.js
-index 10842b6..2c54865 100644
 --- a/gulp-wrap/test/test.js
 +++ b/gulp-wrap/test/test.js
-@@ -4,7 +4,8 @@ var assert = require('assert');
+@@ -4,7 +4,8 @@
  var path = require('path');
  var expect = require('expect.js');
  
@@ -23,7 +21,7 @@ index 10842b6..2c54865 100644
  var File = require('vinyl');
  var wrap = require('..');
  
-@@ -47,7 +48,7 @@ describe('gulp-wrap', function() {
+@@ -47,7 +48,7 @@
      })
      .end(new File({
        path: 'test/fixtures/fileStream.txt',

@@ -11,6 +11,7 @@ License: Expat
 
 Files: debian/*
 Copyright: 2017 Pirate Praveen <praveen@debian.org>
+ 2021 Yadd <yadd@debian.org>
 License: Expat
 
 Files: gulp-wrap/*
