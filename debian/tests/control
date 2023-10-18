@@ -1,0 +1,3 @@
+Depends: @, @builddeps@
+Features: test-name=gulp-wrap-test
+Test-Command: cd gulp-wrap && sh -e ../debian/nodejs/gulp-wrap/test

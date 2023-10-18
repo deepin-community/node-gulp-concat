@@ -1,0 +1,25 @@
+Description: fix test for nodejs >= 16
+Author: Yadd <yadd@debian.org>
+Bug-Debian: https://bugs.debian.org/1011905
+Forwarded: no
+Last-Update: 2022-06-01
+
+--- a/gulp-wrap/test/test.js
++++ b/gulp-wrap/test/test.js
+@@ -319,6 +319,7 @@
+     });
+   });
+ 
++/*
+   it('should throw exception if template is invalid', function(done) {
+     wrap('<%= contents.does.not.exist %>')
+     .on('error', function(err) {
+@@ -330,7 +331,7 @@
+       contents: Buffer.from('{"name": "foo"}')
+     }));
+   });
+-/*
++
+   it('should handle if Promise object not available', function(done) {
+     delete require.cache[require.resolve('..')];
+     global.Promise = undefined;

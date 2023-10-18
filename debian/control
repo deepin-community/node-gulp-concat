@@ -15,11 +15,11 @@ Build-Depends: debhelper-compat (= 13)
  , node-vinyl <!nocheck>
  , node-vinyl-bufferstream <!nocheck>
  , node-expect.js <!nocheck>
-# , node-bufferstream <!nocheck>
+ , node-bufferstream <!nocheck>
  , node-consolidate <!nocheck>
  , node-plugin-error <!nocheck>
  , dh-sequence-nodejs
-Standards-Version: 4.6.0
+Standards-Version: 4.6.1
 Vcs-Browser: https://salsa.debian.org/js-team/node-gulp-concat
 Vcs-Git: https://salsa.debian.org/js-team/node-gulp-concat.git
 Homepage: https://github.com/contra/gulp-concat
@@ -30,6 +30,8 @@ Package: node-gulp-concat
 Architecture: all
 Depends: ${misc:Depends}
  , node-concat-with-sourcemaps
+ , node-extend
+ , node-plugin-error
  , node-through2
  , node-vinyl
  , node-vinyl-bufferstream

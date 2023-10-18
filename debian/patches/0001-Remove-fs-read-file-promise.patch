@@ -10,8 +10,6 @@ Forwarded: not-needed
  gulp-wrap/package.json | 1 -
  2 files changed, 3 insertions(+), 2 deletions(-)
 
-diff --git a/gulp-wrap/index.js b/gulp-wrap/index.js
-index c71e030..dd24db0 100644
 --- a/gulp-wrap/index.js
 +++ b/gulp-wrap/index.js
 @@ -1,12 +1,14 @@
@@ -30,8 +28,6 @@ index c71e030..dd24db0 100644
  var through = require('through2');
  var tryit = require('tryit');
  var VinylBufferStream = require('vinyl-bufferstream');
-diff --git a/gulp-wrap/package.json b/gulp-wrap/package.json
-index 68ced91..ed780c0 100644
 --- a/gulp-wrap/package.json
 +++ b/gulp-wrap/package.json
 @@ -41,7 +41,6 @@

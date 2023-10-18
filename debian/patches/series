@@ -4,3 +4,6 @@
 0004-Use-standard-nodejs-for-buffer-to-stream-construct.patch
 0005-Simplify-test-by-do-not-create-node_modules-dir.patch
 0006-Do-not-test-for-old-nodejs-with-no-promise.patch
+#drop-test-incomptible-with-debci.patch
+add-fix-for-js-yaml.patch
+fix-test-for-nodejs-16.patch

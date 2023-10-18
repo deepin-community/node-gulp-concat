@@ -7,11 +7,9 @@ Forwarded: not-needed
  gulp-wrap/test/test.js | 3 ++-
  1 file changed, 2 insertions(+), 1 deletion(-)
 
-diff --git a/gulp-wrap/test/test.js b/gulp-wrap/test/test.js
-index 9a8c92c..8eaf2fa 100644
 --- a/gulp-wrap/test/test.js
 +++ b/gulp-wrap/test/test.js
-@@ -330,7 +330,7 @@ describe('gulp-wrap', function() {
+@@ -330,7 +330,7 @@
        contents: Buffer.from('{"name": "foo"}')
      }));
    });
@@ -20,7 +18,7 @@ index 9a8c92c..8eaf2fa 100644
    it('should handle if Promise object not available', function(done) {
      delete require.cache[require.resolve('..')];
      global.Promise = undefined;
-@@ -348,4 +348,5 @@ describe('gulp-wrap', function() {
+@@ -348,4 +348,5 @@
        contents: Buffer.from('foo')
      }));
    });

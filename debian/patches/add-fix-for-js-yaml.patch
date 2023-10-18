@@ -1,0 +1,16 @@
+Description: add fix for js-yaml ≥ 4
+Author: Yadd <yadd@debian.org>
+Forwarded: not-needed
+Last-Update: 2021-12-10
+
+--- a/gulp-wrap/index.js
++++ b/gulp-wrap/index.js
+@@ -56,7 +56,7 @@
+           if (ext === '.json') {
+             contents = JSON.parse(contents);
+           } else if (ext === '.yml' || ext === '.yaml') {
+-            contents = require('js-yaml').safeLoad(contents);
++            contents = require('js-yaml').load(contents);
+           }
+         }, function(err) {
+           if (!err) {
